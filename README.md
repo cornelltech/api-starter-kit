@@ -24,7 +24,7 @@ This would be a pip package that would have a command line tool to use.
 #### Cons
 1) rather difficult and complicated to update.  need a package server.  Need to deploy.  THen need to pip upgrade
 
-### Git submodule
+### Git submodule or separate repo
 This submodule would be in all of our projects under a directory.  When you pull it would update.  You could push to it fairly easily.
 #### Pros
 1) easy to update, scripts are right there in your repo.
@@ -36,5 +36,12 @@ There would be easy to remember endpoint where you could run scripts from for lo
 #### Pros
 1) no local update needed, everyone would imidatly use the most recent code.
 2) no installation needed.
+3) could keep track of deployments.  Could automatically destroy after a given time period?
 #### Cons
 1) difficult to update.  Need to update repo, push, and deploy.  Although if they are scripts mostly, you could just update and run the scripts from the repo.  Then push when convienent.
+
+## Specific things this repo should do.  Commands that we will need.
+* create a skeleton django repo that is setup correctly.  With .env file.
+* create docker files nessesary to run locally and in AWS.
+* Setup continuous integration through github.  Probably useing circleCI.
+* Create a deployment in AWS, probably using cloudformation.
