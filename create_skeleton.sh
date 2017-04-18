@@ -41,9 +41,14 @@ pip install --upgrade pip
 
 pip install -r requirements.txt
 
-django-admin startproject ${project_name} .
+#django-admin startproject ${project_name} .
+docker-compose run web django-admin startproject ${project_name} .
+
+cp ./settings.py ./${project_name}/
+
 
 # things todo
 # 1) add environment vars
 # 2) add gunicorn or some webserver
+# 3) add postgres
 
