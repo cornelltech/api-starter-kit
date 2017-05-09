@@ -45,3 +45,6 @@ There would be easy to remember endpoint where you could run scripts from for lo
 * create docker files nessesary to run locally and in AWS.
 * Setup continuous integration through github.  Probably useing circleCI.
 * Create a deployment in AWS, probably using cloudformation.
+
+## Steps to setup a project from scratch
+* create 

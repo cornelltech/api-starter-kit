@@ -45,10 +45,10 @@ pip install -r requirements.txt
 docker-compose run web django-admin startproject ${project_name} .
 
 cp ./settings.py ./${project_name}/
+cp ./dotenv ./${project_name}/.env
 
 
 # things todo
 # 1) add environment vars
 # 2) add gunicorn or some webserver
-# 3) add postgres
 

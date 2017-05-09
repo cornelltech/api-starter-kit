@@ -1,0 +1,19 @@
+version: '2'
+services:
+  db:
+    image: postgres
+    env_file: .env
+#    environment:
+#      - POSTGRES_USER=postgresuser
+  web:
+    build: 
+      context: .
+      dockerfile: ./compose/Dockerfile
+    command: /start-dev.sh
+    env_file: .env
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
